@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+/* * {
+  background-image: url('./images/mountains.jpg');
+  background-repeat: no-repeat;
+  color: white;
+} */

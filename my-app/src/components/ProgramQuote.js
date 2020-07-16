@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import './style.css';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
+import { Button, Alert } from 'reactstrap';
 import {  fetchQuote  } from '../store/actions';
 
 const ProgramQuote = props => {
@@ -11,20 +13,23 @@ const ProgramQuote = props => {
 
 
     return (
-        <div>
-          <h1>Kanye Quotes</h1>
+        <div className='main-container'>
+          <h1>Kanye Says...</h1>
+          <div className='kanye'>
           {props.isFetching && (
           <Loader 
-            type="Puff"
+            type="Rings"
             color="#00BFFF"
             height={100}
             width={100}
+
           />
           )}
           {props.quote && <h3>"{props.quote}"</h3>}
-          {props.error && <p className="error">{props.error}</p>}
-          <button onClick={props.fetchQuote} >Fetch a new quote</button>
+          {props.error && <Alert className="error">{props.error}</Alert>}
+          <Button color="warning" onClick={props.fetchQuote} >More Kanye</Button>
           </div>
+        </div>  
       )
 }
 
