@@ -1,0 +1,15 @@
+.kanye {
+    background-image: url('../images/mountains.jpg');
+    height: 500px;
+    width: 1000px;
+    text-align: center;
+    margin-left: 23%;
+}
+.kanye Button {
+    margin-top: 2%;
+    color: #030059;
+}
+.kanye h3 {
+    padding-top: 15%;
+    color: #121888;
+}
